@@ -58,10 +58,18 @@ ___
 
 <br><br>
 
-## Install dependency
+## Install
+
+### Install dependency
 ```shell
 uv pip install autoawq
 ```
+
+### Install specific dependency
+```shell
+uv add transformers==4.37.2
+```
+- If you get `error: No pyproject.toml found in current directory or any parent directory` then run `uv init`
 
 <br><br>
 
