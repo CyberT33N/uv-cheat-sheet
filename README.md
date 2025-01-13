@@ -567,3 +567,49 @@ Manage `uv`'s internal state and directories.
 - `uv python dir`: Show the directory for installed Python versions.
 - `uv self update`: Update `uv` to the latest version.
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br>
+<br><br>
+___
+<br><br>
+<br><br>
+
+
+# FAQ / Troubleshooting
+
+<br><br>
+
+## warning: `VIRTUAL_ENV=...` does not match the project environment path `.venv` and will be ignored
+```shell
+deactivate
+rm -rf .venv
+uv venv
+source .venv/bin/activate
+uv sync
+```
+
