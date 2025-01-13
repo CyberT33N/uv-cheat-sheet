@@ -41,7 +41,31 @@ source myenv/bin/activate
 <br><br>
 
 
+
+
+
+
+
+
+
+<br><br>
+<br><br>
+___
+<br><br>
+<br><br>
+
+# Dependency
+
+<br><br>
+
 ## Install dependency
 ```shell
 uv pip install autoawq
+```
+
+<br><br>
+
+## List dependencies
+```shell
+uv pip list
 ```
