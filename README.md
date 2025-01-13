@@ -14,6 +14,120 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br>
+<br><br>
+___
+<br><br>
+<br><br>
+
+# Files
+
+## **`.python-version`**
+- **Description**: Specifies the project's default Python version.
+- **Purpose**: Tells `uv` which Python version to use when creating the virtual environment for the project.
+- **Usage**:
+  - Ensure this file matches your project's required Python version.
+  - Example content: `3.12.7`
+
+---
+
+## **`.venv`**
+- **Description**: The directory containing your project's **virtual environment**.
+- **Purpose**: Provides an isolated Python environment where dependencies are installed, separate from the system's Python installation.
+- **Key Points**:
+  - Automatically created by `uv` when setting up the project.
+  - Keeps the project environment clean and independent.
+- **Related Docs**: Refer to the [project environment documentation](https://docs.astral.sh/uv/getting-started/first-steps/) for details.
+
+---
+
+## **`uv.lock`**
+- **Description**: A cross-platform lockfile that records the exact versions of all resolved dependencies in your project.
+- **Purpose**:
+  - Ensures **consistent and reproducible installations** across different machines.
+  - Works alongside `pyproject.toml`, which defines broader dependency requirements.
+- **Key Notes**:
+  - This file should **always be committed to version control**.
+  - It locks dependency versions for stability during deployment and collaboration.
+- **Comparison with `pyproject.toml`**:
+  - `pyproject.toml`: Broad requirements (e.g., `transformers>=4.37.0`).
+  - `uv.lock`: Exact resolved versions (e.g., `transformers==4.37.2`).
+
+---
+
+### Workflow with `uv`
+1. **Initialize Project**:
+   ```bash
+   uv init
+   ```
+   Creates `pyproject.toml` and sets up the project structure.
+
+2. **Add Dependencies**:
+   ```bash
+   uv add <package-name>==<version>
+   ```
+
+3. **Synchronize Environment**:
+   ```bash
+   uv sync
+   ```
+   Installs dependencies and updates the `.venv` environment based on `pyproject.toml` and `uv.lock`.
+
+4. **List Installed Packages**:
+   ```bash
+   uv pip list
+   ```
+
+5. **Update Lockfile**:
+   ```bash
+   uv lock
+   ```
+   Regenerates the `uv.lock` file after making changes to `pyproject.toml`.
+
+---
+
+### Best Practices
+- Always keep `.python-version`, `.venv`, and `uv.lock` in sync with your project requirements.
+- Commit `uv.lock` to version control for reproducibility.
+- Use `uv sync` to ensure dependencies match the lockfile.
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <br><br>
 <br><br>
 ___
