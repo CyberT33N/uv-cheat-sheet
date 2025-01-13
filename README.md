@@ -48,6 +48,17 @@ source myenv/bin/activate
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 <br><br>
 <br><br>
 ___
@@ -56,6 +67,18 @@ ___
 
 # Dependency
 
+
+## Uninstall
+```shell
+uv pip uninstall transformers
+```
+
+
+
+
+
+
+<br><br>
 <br><br>
 
 ## Install
