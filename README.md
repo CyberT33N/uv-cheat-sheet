@@ -11,3 +11,29 @@
 ```shell
 curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
+
+
+
+<br><br>
+<br><br>
+___
+<br><br>
+<br><br>
+
+# Environment
+
+<br><br>
+
+## Create environment
+```shell
+# (Recommended) Create a new uv environment. Use `--seed` to install `pip` and `setuptools` in the environment.
+uv venv myenv --python 3.12 --seed
+source myenv/bin/activate
+```
+
+<br><br>
+
+## Activate environment
+```shell
+source myenv/bin/activate
+```
