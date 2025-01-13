@@ -19,6 +19,69 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 
 
 
+<br><br>
+<br><br>
+___
+<br><br>
+<br><br>
+
+
+# CLI
+
+<details><summary>Click to expand..</summary>
+
+# venv
+- https://docs.astral.sh/uv/reference/cli/#uv-venv
+
+
+| **Category**         | **Description**                                                                                                                                                                                                                                           |
+|-----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Purpose**           | Create a virtual environment. By default, creates a `.venv` in the working directory.                                                                                                                            |
+| **Usage**             | `uv venv [OPTIONS] [PATH]`                                                                                                                                                                                                                              |
+| **Arguments**         | **PATH**: The path to the virtual environment to create. Defaults to `.venv` in the working directory. Relative paths are resolved relative to the working directory.                                              |
+| **Options**           |                                                                                                                                                                                                                                                          |
+| `--allow-existing`    | Preserve any existing files or directories at the target path.                                                                                                                                                                                           |
+| `--allow-insecure-host` | Allow insecure connections to a host. Expects hostname, host-port pair, or URL. (Use cautiously!)                                                                                                                                                      |
+| `--cache-dir`         | Specify the cache directory. Defaults to `$XDG_CACHE_HOME/uv` or `%LOCALAPPDATA%\uv\cache`.                                                                                                                       |
+| `--color`             | Control color output. Options: `auto`, `always`, `never`.                                                                                                                                                                                                |
+| `--config-file`       | Path to a `uv.toml` configuration file.                                                                                                                                                                                                                  |
+| `--default-index`     | URL of the default package index (e.g., `<https://pypi.org/simple>`).                                                                                                                                                                                     |
+| `--directory`         | Change the working directory before running the command.                                                                                                                                                                                                 |
+| `--exclude-newer`     | Limit packages to those uploaded before a specific date.                                                                                                                                                                                                 |
+| `--extra-index-url`   | (Deprecated) Additional URLs of package indexes.                                                                                                                                                                                                         |
+| `--find-links`, `-f`  | Specify locations to search for candidate distributions.                                                                                                                                                                                                 |
+| `--help`, `-h`        | Display concise help for this command.                                                                                                                                                                                                                   |
+| `--index`             | Specify additional URLs for dependency resolution.                                                                                                                                                                                                       |
+| `--index-strategy`    | Strategy for resolving multiple indexes. Options: `first-index`, `unsafe-first-match`, `unsafe-best-match`.                                                                                                                                               |
+| `--index-url`, `-i`   | (Deprecated) URL of the Python package index (default: `<https://pypi.org/simple>`).                                                                                                                                                                     |
+| `--keyring-provider`  | Use keyring for authentication. Options: `disabled`, `subprocess`.                                                                                                                                                                                        |
+| `--link-mode`         | Specify the method for installing packages. Options: `clone`, `copy`, `hardlink`, `symlink`.                                                                                                                                                             |
+| `--native-tls`        | Use platform’s native certificate store instead of Mozilla’s webpki-roots.                                                                                                                                                                               |
+| `--no-cache`, `-n`    | Avoid using the cache.                                                                                                                                                                                                                                   |
+| `--no-config`         | Avoid discovering configuration files (`pyproject.toml`, `uv.toml`).                                                                                                                                                                                     |
+| `--no-index`          | Ignore the registry index and rely on direct dependencies.                                                                                                                                                                                               |
+| `--no-progress`       | Hide all progress outputs.                                                                                                                                                                                                                               |
+| `--no-project`        | Avoid discovering a project or workspace.                                                                                                                                                                                                                |
+| `--no-python-downloads` | Disable automatic Python downloads.                                                                                                                                                                                                                    |
+| `--offline`           | Disable network access and rely only on cached data.                                                                                                                                                                                                     |
+| `--project`           | Run the command within a specified project directory.                                                                                                                                                                                                    |
+| `--prompt`            | Provide a custom prompt prefix for the virtual environment.                                                                                                                                                                                              |
+| `--python`, `-p`      | Specify the Python interpreter to use for the virtual environment.                                                                                                                                                                                       |
+| `--python-preference` | Prefer `uv`-managed or system Python installations. Options: `only-managed`, `managed`, `system`, `only-system`.                                                                                                                                          |
+| `--quiet`, `-q`       | Suppress all output.                                                                                                                                                                                                                                     |
+| `--relocatable`       | Make the virtual environment relocatable.                                                                                                                                                                                                                |
+| `--seed`              | Install seed packages (`pip`, `setuptools`, `wheel`).                                                                                                                                                                                                    |
+| `--system-site-packages` | Grant access to the system site packages directory.                                                                                                                                                                                                    |
+| `--verbose`, `-v`     | Enable verbose output.                                                                                                                                                                                                                                   |
+| `--version`, `-V`     | Display the version of `uv`.                                                                                                                                                                                                                             |
+
+
+
+</details>
+
+
+
+
 
 
 
