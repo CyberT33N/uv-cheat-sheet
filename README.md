@@ -181,10 +181,23 @@ ___
 
 # Dependency
 
+<br><br>
+
+
+
 
 ## Uninstall
+
+<br><br>
+
+### Directly deleted from virtuel environment
 ```shell
 uv pip uninstall transformers
+```
+
+### Delete from pyproject.toml
+```shell
+uv remove transformers
 ```
 
 
