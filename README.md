@@ -37,3 +37,11 @@ source myenv/bin/activate
 ```shell
 source myenv/bin/activate
 ```
+
+<br><br>
+
+
+## Install dependency
+```shell
+uv pip install autoawq
+```
