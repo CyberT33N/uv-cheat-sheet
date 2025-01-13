@@ -26,10 +26,6 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 
 
 
-
-
-
-
 <br><br>
 <br><br>
 ___
@@ -173,13 +169,116 @@ source myenv/bin/activate
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <br><br>
 <br><br>
 ___
 <br><br>
 <br><br>
 
-# Dependency
+
+## **Python Versions**
+Manage Python versions directly with `uv`.
+
+### Commands:
+- `uv python install <version>`: Install a specific Python version.
+- `uv python list`: List available Python versions.
+- `uv python find <version>`: Locate an installed Python version.
+- `uv python pin <version>`: Pin the project to a specific Python version.
+- `uv python uninstall <version>`: Uninstall a Python version.
+
+**Reference**: [Guide on Installing Python](https://docs.astral.sh/uv/getting-started/first-steps/)
+
+
+
+
+
+
+
+
+
+
+
+<br><br>
+<br><br>
+___
+<br><br>
+<br><br>
+
+# **Scripts**
+Run and manage standalone Python scripts.
+
+### Commands:
+- `uv run <script.py>`: Execute a Python script.
+- `uv add --script <dependency>`: Add a dependency to a script.
+- `uv remove --script <dependency>`: Remove a dependency from a script.
+
+**Reference**: [Guide on Running Scripts](https://docs.astral.sh/uv/getting-started/first-steps/)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br>
+<br><br>
+___
+<br><br>
+<br><br>
+
+# Projects
+- Work with Python projects (using `pyproject.toml`).
+
+### Commands:
+- `uv init`: Initialize a new Python project.
+- `uv add <dependency>`: Add a dependency to the project.
+- `uv remove <dependency>`: Remove a dependency from the project.
+- `uv sync`: Sync project dependencies with the environment.
+- `uv lock`: Generate a lockfile for project dependencies.
+- `uv run <command>`: Execute a command in the project environment.
+- `uv tree`: View the dependency tree of the project.
+- `uv build`: Build the project into distributable archives.
+- `uv publish`: Publish the project to a package index.
+
+
+
+
+<br><br>
+
+
+## Dependency
 
 <br><br>
 
@@ -281,3 +380,127 @@ Wenn du `uv pip install` benutzt, aktualisiert das Tool nur die Pakete im Python
 ```shell
 uv pip list
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br>
+<br><br>
+___
+<br><br>
+<br><br>
+
+
+
+## **Tools**
+Run and manage Python tools (e.g., `ruff`, `black`).
+
+### Commands:
+- `uvx <tool> <args>`: Run a tool in a temporary environment.
+- `uv tool install <tool>`: Install a tool globally.
+- `uv tool uninstall <tool>`: Uninstall a tool.
+- `uv tool list`: List installed tools.
+- `uv tool update-shell`: Update the shell to include tool executables.
+
+**Reference**: [Guide on Tools](https://docs.astral.sh/uv/getting-started/first-steps/)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br>
+<br><br>
+___
+<br><br>
+<br><br>
+
+
+## **Pip Interface**
+Directly manage environments and packages when finer control is required.
+
+### Environment Management:
+- `uv venv <path>`: Create a virtual environment.
+
+**Reference**: [Using Environments](https://docs.astral.sh/uv/getting-started/first-steps/)
+
+### Package Management (like `pip`):
+- `uv pip install <package>`: Install a package.
+- `uv pip show <package>`: Show package details.
+- `uv pip freeze`: List installed packages and versions.
+- `uv pip check`: Verify package compatibility in the environment.
+- `uv pip list`: List installed packages.
+- `uv pip uninstall <package>`: Uninstall a package.
+- `uv pip tree`: View the environment's dependency tree.
+
+**Reference**: [Managing Packages](https://docs.astral.sh/uv/getting-started/first-steps/)
+
+### Lockfile Management:
+- `uv pip compile`: Generate a lockfile from dependencies.
+- `uv pip sync`: Synchronize the environment with a lockfile.
+
+**Reference**: [Locking Environments](https://docs.astral.sh/uv/getting-started/first-steps/)
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br>
+<br><br>
+___
+<br><br>
+<br><br>
+
+
+## **6. Utility Commands**
+Manage `uv`'s internal state and directories.
+
+### Commands:
+- `uv cache clean`: Remove all cache entries.
+- `uv cache prune`: Remove outdated cache entries.
+- `uv cache dir`: Show the cache directory path.
+- `uv tool dir`: Show the tools directory path.
+- `uv python dir`: Show the directory for installed Python versions.
+- `uv self update`: Update `uv` to the latest version.
+
